@@ -518,9 +518,11 @@ const btn7=document.querySelector(".btn7");
 const btn8=document.querySelector(".btn8");
 const btn9=document.querySelector(".btn9");
 const btn10=document.querySelector(".btn10");
+
 //to set value for page
 let page=document.getElementsByClassName("changes")[0];
-//set starging item position with 0th index
+
+//set starging item position with 0
 let currentItem=0;
 let curPage=0/10+1;
 
@@ -564,6 +566,7 @@ firstBtn.addEventListener("click",()=>{
   alert("You are alread in First page")
 }
 })
+
 //logic for last button
 lastBtn.addEventListener("click",()=>{
   if(currentItem<employees.length-10){
@@ -574,7 +577,8 @@ lastBtn.addEventListener("click",()=>{
   alert("You are already in last page")
 }
 })
-//1btn:
+
+//button from 1 to 10 code are below:
 btn1.addEventListener("click",()=>{
   currentItem=0;
   page.innerHTML=currentItem/10+1;
@@ -625,7 +629,6 @@ btn10.addEventListener("click",()=>{
   page.innerHTML=currentItem/10+1;
   displayEmployees(currentItem);
 });
-
 
 // to add div element to class
 function displayEmployees(start){
