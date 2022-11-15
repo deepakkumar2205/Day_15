@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-table</title>
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="text/css" href="css/bootstrap.css"> -->
+    <!-- bootstrap icon link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- styles file link -->
+    <link rel="stylesheet" href="style.css">
+<body>
+    <!-- <section class="form"> -->
+    <section class="row form">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- form -->
+                            <form action="/" method="post">
+                            <!-- form conatians 
+                            firstname, last name, address,
+                            Gender,gender,choice of food
+                            state,country -->
+                                <div class="form-group">
+                                    
+                                    <!-- splitting into grid 6 + 6 -->
+                                    <div class="row">
+                                        <div class="headder">
+                                            <h3 class="col-sm-12">User Details<hr></h3>
+                                            <small class="form-text text-muted smalltext">enter your details below to add datas into the table.</small>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="" class="name sm-6 star"><b>First Name</b></label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="" class="name sm-6"><b>Last Name</b></label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <label for="" class="name sm-6"><b>Enter Your Address In Detail</b></label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="" class="name sm-6"><b>Pincode</b></label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="" class="name sm-6"><b>Gender</b></label>
+                                            <input type="dropdown" class="form-control">
+                                        </div>
+                                        <h6>Choice of food:</h3>
+                                            <small class="form-text smalltext-food">You have to selech at least two of the checkboxes below:</small>
+                                        <div class="col-sm-12">
+                                            <input type="checkbox" class="name sm-2 checkbox" name="" id="check1">
+                                            <label for="" >South Indian</label>
+                                            <input type="checkbox" class="name sm-2 checkbox" name="" id="check2">
+                                            <label for="" >North Indian</label>
+                                            <input type="checkbox" class="name sm-2 checkbox" name="" id="check3">
+                                            <label for="" >Chinese</label>
+                                            <input type="checkbox" class="name sm-2 checkbox" name="" id="check4">
+                                            <label for="" >Anything</label>
+                                            <input type="checkbox" class="name sm-2 checkbox" name="" id="check5">
+                                            <label for="" >Other food</label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="" class="name sm-6"><b>State</b></label>
+                                            <input type="dropdown" class="form-control">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="" class="name sm-6"><b>Country</b></label>
+                                            <input type="dropdown" class="form-control">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <button class="btn btn-primary" type="submit" value="submit">Add</button>
+                                        </div>
+                                    </div>   
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br>        
+    <section class="table">
+        <table class="table table-dark table-striped">
+            <thead>
+                <th>Firstname</th>                 
+                <th>Lastname</th>                 
+                <th>Address</th>                 
+                <th>Pincode</th>                 
+                <th>Gender</th>                 
+                <th>Food</th>                 
+                <th>State</th>                 
+                <th>Country</th>                 
+            </thead>
+            <tbody>
+                <!-- js code to add body -->
+            </tbody>
+          </table>
+    </section>
+    <!-- </section> -->
+    <!-- js file link -->
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script> -->
+</body>
+</html>
