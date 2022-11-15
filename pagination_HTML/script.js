@@ -501,25 +501,6 @@ let employees=[
   }
 ]
 /////////////////////////////////////////////////////////////////////////
-let test=document.getElementById("test");
-
-function displayTemplate(data){
-  let employees=[];
-  for(let property of data){
-
-    employees.push(`
-    id    : ${property.id},
-    name  : ${property.name},
-    email : ${property.email},
-    `)
-  }
-}
-let data=document.getElementById("datas");
-
-//select user target element
-let id1=document.getElementById("id");
-let name1=document.getElementById("name");
-let email1=document.getElementById("email");
 
 //lets do a selection for targeting button element
 const firstBtn=document.querySelector(".firstBtn")
@@ -527,70 +508,147 @@ const prevBtn=document.querySelector(".prevBtn")
 const nextBtn=document.querySelector(".nextBtn")
 const lastBtn=document.querySelector(".lastBtn")
 
+const btn1=document.querySelector(".btn1");
+const btn2=document.querySelector(".btn2");
+const btn3=document.querySelector(".btn3");
+const btn4=document.querySelector(".btn4");
+const btn5=document.querySelector(".btn5");
+const btn6=document.querySelector(".btn6");
+const btn7=document.querySelector(".btn7");
+const btn8=document.querySelector(".btn8");
+const btn9=document.querySelector(".btn9");
+const btn10=document.querySelector(".btn10");
+//to set value for page
+let page=document.getElementsByClassName("changes")[0];
 //set starging item position with 0th index
 let currentItem=0;
+let curPage=0/10+1;
 
-//Try to load the dat for first item
+//Try to load the data for first page when page load
 window.addEventListener("DOMContentLoaded",()=>{
-  const item=employees[currentItem];
-  id1.innerHTML=item.id;
-  name1.innerHTML=item.name;
-  email1.innerHTML=item.email;
-})
-//create a functon showUserReview based on button seleciton
-function showUserReview(item){
-      item=employees[item];
-     id1.innerHTML=item.id;
-  name1.innerHTML=item.name;
-  email1.innerHTML=item.email;
-}
-
-//Logic for next user when user click on button
-nextBtn.addEventListener("click",()=>{
-  //increament current postion to 1.
-  if(currentItem<employees.length-1){
-    currentItem++;
-    showUserReview(currentItem);
-  }
+  displayEmployees(currentItem);
+  page.innerHTML=(currentItem/10+1);
 })
 
 //Logic for previous user when user click on button
 prevBtn.addEventListener("click",()=>{
-  //decreament current postion to 1.
-  if(currentItem>0){
-    currentItem--;
-    showUserReview(currentItem);
+  //decreament current postion to 10.
+  if(0<currentItem){
+    currentItem-=10;
+    page.innerHTML=(currentItem/10+1);
+    displayEmployees(currentItem);
+  }else{
+    alert("You are already in first page.")
+  }
+})
+
+//Logic for next page when user click on next button
+nextBtn.addEventListener("click",()=>{
+  //increase current position to 10.
+  if(employees.length-10>currentItem){
+    currentItem+=10;
+    page.innerHTML=(currentItem/10+1);
+    displayEmployees(currentItem);
+  }else{
+    alert("You are already in last page")
   }
 })
 
 //logic for first button
 firstBtn.addEventListener("click",()=>{
+  if(currentItem>0){
   currentItem=0;
-  showUserReview(currentItem);
+  page.innerHTML=(currentItem/10+1);
+  displayEmployees(currentItem);
+}else{
+  alert("You are alread in First page")
+}
 })
 //logic for last button
 lastBtn.addEventListener("click",()=>{
-  currentItem=employees.length-1;
-  showUserReview(currentItem);
+  if(currentItem<employees.length-10){
+  currentItem=employees.length-10;
+  page.innerHTML=(currentItem/10+1);
+  displayEmployees(currentItem);
+}else{
+  alert("You are already in last page")
+}
 })
+//1btn:
+btn1.addEventListener("click",()=>{
+  currentItem=0;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+btn2.addEventListener("click",()=>{
+  currentItem=10;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+btn3.addEventListener("click",()=>{
+  currentItem=20;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+btn4.addEventListener("click",()=>{
+  currentItem=30;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+btn5.addEventListener("click",()=>{
+  currentItem=40;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+btn6.addEventListener("click",()=>{
+  currentItem=50;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+btn7.addEventListener("click",()=>{
+  currentItem=60;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+btn8.addEventListener("click",()=>{
+  currentItem=70;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+btn9.addEventListener("click",()=>{
+  currentItem=80;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+btn10.addEventListener("click",()=>{
+  currentItem=90;
+  page.innerHTML=currentItem/10+1;
+  displayEmployees(currentItem);
+});
+
 
 // to add div element to class
-let addTo=document.querySelector("#datas");
-for(let i=0;i<10;i++){
-  let div=document.createElement("div");
-  div.innerHTML=`
-  <div>
-  <label>Id   :</lable>
-  <p>${employees[i].id}</p>
-  </div>
-  <div>
-  <label>Name:</lable>
-  <p>${employees[i].name}</p>
-  </div>
-  <div>
-  <label>email:</lable>
-  <p>${employees[i].email}</p>
-  </div>
-  `
-  addTo.appendChild(div);
+function displayEmployees(start){
+  let addTo=document.querySelector("#datas");
+
+  let dum="";
+  for(let i=start;i<start+10;i++){
+    dum+=(`
+    <div id="k">
+    <div >
+       <label>Id:</lable>
+       <p id="para">${employees[i].id}</p>
+    </div>
+    <div>
+       <label>Name:</lable>
+       <p id="name">${employees[i].name}</p>
+    </div>
+    <div>
+       <label >email:</lable>
+       <p id="email">${employees[i].email}</p>
+    </div>
+    </div >
+  `);
+  addTo.innerHTML=dum;
+}
 }
