@@ -632,7 +632,7 @@ btn10.addEventListener("click",()=>{
 
 // to add div element to class
 function displayEmployees(start){
-  let addTo=document.querySelector("#datas");
+  let addTo=document.querySelector(".table-responsive");
 
   let dum="";
   for(let i=start;i<start+10;i++){
