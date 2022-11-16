@@ -1,13 +1,14 @@
 .container{
     background-color: #add8e6;
     border-radius: 15px;
-    /* margin-left: 50px;
-    margin-right: 50px; */
+    /* margin-left: 50px;*/
+    /* margin-right: 80%;  */
 }
 .form{
-    /* margin-left: 50px; */
+    
     padding-left: 50px;
     padding-right: 50px;
+    margin-right: 50%;
 }
 .card-body{
     background-color: #add8e6;
@@ -32,7 +33,7 @@ hr{
 
 .checkbox{
     margin-left: 25px;
-}
+}yii
 .btn{
     width: 100px;
 }
@@ -52,4 +53,15 @@ th{
 }
 td{
     text-align: center;
+}
+.select.row.form{
+   margin-right: 50%;
+}
+@media screen and (max-width:1000px){
+    .form{
+        margin-right: 0;
+    }
+}
+hr{
+    color:black;
 }

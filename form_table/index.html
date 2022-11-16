@@ -24,28 +24,30 @@
                                     
                                     <div class="row">
                                         <div class="headder">
-                                            <h3 class="col-sm-12">User Details<hr></h3>
-                                            <small class="form-text text-muted smalltext">enter your details below to add datas into the table.</small>
+                                            <h1 class="col-sm-12" id="title">User Details<hr></h1>
+                                            <p class="form-text text-muted smalltext" id="description">enter your details below to add datas into the table.</p>
+                                        </div>
+                                        <form id="form">
+                                        <div class="col-sm-6 ">
+                                                <label for="first-name" class="name sm-6 star" ><b>First Name</b></label>
+                                                <input type="text" id="first-name" class="form-control" placeholder="Enter your first name" >
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="" class="name sm-6 star" ><b>First Name</b></label>
-                                            <input type="text" class="form-control" id="firstname">
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label for="" class="name sm-6" ><b>Last Name</b></label>
-                                            <input type="text" class="form-control" id="lastname">
+                                            <label for="last-name" class="name sm-6" ><b>Last Name</b></label>
+                                            <input type="text" class="form-control" id="last-name" placeholder="Enter your last name">
                                         </div>
                                         <div class="col-sm-12">
-                                            <label for="" class="name sm-6" ><b>Enter Your Address In Detail</b></label>
-                                            <input type="text" class="form-control" id="address">
+                                            <label for="address" class="name sm-6" ><b>Address</b></label>
+                                            <!-- <input   class="form-control" id="address" placeholder="Enter your address here in detail"> -->
+                                            <textarea  id="address" cols="30" rows="1" class="form-control" placeholder="address"></textarea>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="" class="name sm-6" ><b>Pincode</b></label>
-                                            <input type="text" class="form-control" id="pincode">
+                                            <label for="pincode" class="name sm-6" ><b>Pincode</b></label>
+                                            <input type="text" class="form-control" id="pincode" placeholder="Enter your pin-code">
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="" class="name sm-6" ><b>Gender</b></label>
-                                            <input type="text" class="form-control" id="gender">
+                                            <label for="gender" class="name sm-6" ><b>Gender</b></label>
+                                            <input type="text" class="form-control" id="gender" placeholder="Type what you are Male/Female/Trans">
                                         </div>
                                         <h6>Choice of food:</h3>
                                             <small class="form-text smalltext-food">You have to selech at least two of the checkboxes below:</small>
@@ -70,8 +72,9 @@
                                             <input type="text" class="form-control" id="country">
                                         </div>
                                         <div class="col-sm-3">
-                                            <button class="btn btn-primary" onclick="onFormSubmit()">Add</button>
+                                            <button class="btn btn-primary" type="button" onclick="onFormSubmit()" id="submit">Add</button>
                                         </div>
+                                    </form>
                                     </div>   
                                 </div>
                         </div>
@@ -101,7 +104,7 @@
           </table>
     </section> 
 
-    <!-- </section> -->
+    
     <!-- js file link -->
     <script src="script.js"></script>
     <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>

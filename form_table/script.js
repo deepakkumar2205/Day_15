@@ -29,8 +29,8 @@ for(var checkbox of checkboxes){
 function readFormData(){
     // create an empty object
     const formData= {};
-    formData["firstname"]=     document.getElementById("firstname").value;
-    formData["lastname"] =     document.getElementById("lastname").value;
+    formData["firstname"]=     document.getElementById("first-name").value;
+    formData["lastname"] =     document.getElementById("last-name").value;
     formData["address"]  =     document.getElementById("address").value;
     formData["pincode"]  =     document.getElementById("pincode").value;
     formData["gender"]   =     document.getElementById("gender").value;
@@ -70,8 +70,8 @@ function insertNewrecord(data){
 
 //reset functionality should be executed
 function resetForm(){
-    document.getElementById("firstname").value="";
-    document.getElementById("lastname").value="";
+    document.getElementById("first-name").value="";
+    document.getElementById("last-name").value="";
     document.getElementById("address").value="";
     document.getElementById("pincode").value="";
     document.getElementById("gender").value="";
