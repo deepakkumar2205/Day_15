@@ -20,12 +20,11 @@ for(var checkbox of checkboxes){
         if(this.checked == true){
             arr.push(this.value);
         }else{
-            // console.log('you unchecked the checkbox');
+           
             arr=arr.filter(e =>(e!=this.value));
         }
     })
 }
-
 //read form data
 function readFormData(){
     // create an empty object
@@ -39,7 +38,6 @@ function readFormData(){
     formData["state"]    =     document.getElementById("state").value;
     formData["country"]  =     document.getElementById("country").value;
     return formData;
-    // console.log(formData);
 
 }
 
@@ -66,10 +64,10 @@ function insertNewrecord(data){
     cell8.innerHTML=data.country;
     cell9=newRow.insertCell(8);
     cell9.innerHTML=`
-    <button class="btn btn-primary" onClick="onDelete(this)">del</button>
+    <button class="btn btn-secondary" onClick="onDelete(this)"><i class="bi bi-trash-fill"></i></button>
     `
 }
-// }<i class="bi bi-trash-fill"></i>
+
 //reset functionality should be executed
 function resetForm(){
     document.getElementById("firstname").value="";
@@ -97,9 +95,9 @@ function updateRecord(formData){
 
 //this function execute after del button pressed
 function onDelete(td) {
-    if (confirm("Do you want to Delete this Employee Data ? ")) {
-        row = td.parentElement;
-        document.getElementById("employeeList").deleteRow(row.rowIndex);
+    if (confirm("Do you want to Delete this User Detail ? ")) {
+        var s=td.parentElement.parentElement;
+        s.parentElement.removeChild(s);
         resetForm();
     }
 }

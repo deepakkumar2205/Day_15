@@ -43,3 +43,13 @@ hr{
 th{
     text-align: center;
 }
+.btn-secondary{
+    width: 30px;
+    padding: 0px;
+}
+.btn-secondary:hover{
+    background-color: #cd3545;
+}
+td{
+    text-align: center;
+}
