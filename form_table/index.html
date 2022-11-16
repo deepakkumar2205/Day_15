@@ -20,39 +20,32 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-body">
-                            <!-- form -->
-                            <form action="/" method="post">
-                            <!-- form conatians 
-                            firstname, last name, address,
-                            Gender,gender,choice of food
-                            state,country -->
                                 <div class="form-group">
                                     
-                                    <!-- splitting into grid 6 + 6 -->
                                     <div class="row">
                                         <div class="headder">
                                             <h3 class="col-sm-12">User Details<hr></h3>
                                             <small class="form-text text-muted smalltext">enter your details below to add datas into the table.</small>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="" class="name sm-6 star" id="firstname"><b>First Name</b></label>
-                                            <input type="text" class="form-control">
+                                            <label for="" class="name sm-6 star" ><b>First Name</b></label>
+                                            <input type="text" class="form-control" id="firstname">
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="" class="name sm-6" id="lastname"><b>Last Name</b></label>
-                                            <input type="text" class="form-control">
+                                            <label for="" class="name sm-6" ><b>Last Name</b></label>
+                                            <input type="text" class="form-control" id="lastname">
                                         </div>
                                         <div class="col-sm-12">
-                                            <label for="" class="name sm-6" id="address"><b>Enter Your Address In Detail</b></label>
-                                            <input type="text" class="form-control">
+                                            <label for="" class="name sm-6" ><b>Enter Your Address In Detail</b></label>
+                                            <input type="text" class="form-control" id="address">
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="" class="name sm-6" id="pincode"><b>Pincode</b></label>
-                                            <input type="text" class="form-control">
+                                            <label for="" class="name sm-6" ><b>Pincode</b></label>
+                                            <input type="text" class="form-control" id="pincode">
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="" class="name sm-6" id="gender"><b>Gender</b></label>
-                                            <input type="dropdown" class="form-control">
+                                            <label for="" class="name sm-6" ><b>Gender</b></label>
+                                            <input type="text" class="form-control" id="gender">
                                         </div>
                                         <h6>Choice of food:</h3>
                                             <small class="form-text smalltext-food">You have to selech at least two of the checkboxes below:</small>
@@ -69,27 +62,28 @@
                                             <label for="" >Other food</label>
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="" class="name sm-6" class="state"><b>State</b></label>
-                                            <input type="dropdown" class="form-control">
+                                            <label for="" class="name sm-6" ><b>State</b></label>
+                                            <input type="text" class="form-control" id="state">
                                         </div>
                                         <div class="col-sm-6">
-                                            <label for="" class="name sm-6" class="country"><b>Country</b></label>
-                                            <input type="dropdown" class="form-control">
+                                            <label for="" class="name sm-6" ><b>Country</b></label>
+                                            <input type="text" class="form-control" id="country">
                                         </div>
                                         <div class="col-sm-3">
-                                            <button class="btn btn-primary" type="submit" onclick="onFormSubmit">Add</button>
+                                            <button class="btn btn-primary" onclick="onFormSubmit()">Add</button>
                                         </div>
                                     </div>   
-                            </form>
+                                </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section><br>        
+    </section><br>         
+        
     <section class="table">
-        <table class="table table-dark table-striped">
+        <table class="table table-dark table-striped" id="employeeList">
             <thead>
+                <tr>
                 <th>Firstname</th>                 
                 <th>Lastname</th>                 
                 <th>Address</th>                 
@@ -98,13 +92,15 @@
                 <th>Food</th>                 
                 <th>State</th>                 
                 <th>Country</th>   
-                <th><i class="bi bi-trash-fill"></i></th>              
+                <th><i class="bi bi-trash-fill"></i></th> 
+                </tr>             
             </thead>
             <tbody>
-                <!-- js code to add body -->
+                 <!-- js code to add body  -->
             </tbody>
           </table>
-    </section>
+    </section> 
+
     <!-- </section> -->
     <!-- js file link -->
     <script src="script.js"></script>

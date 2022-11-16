@@ -40,3 +40,6 @@ hr{
     color: black;
     background-color: #198754;
 }
+th{
+    text-align: center;
+}
